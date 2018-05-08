@@ -23,4 +23,5 @@ All code is available in this repository in branches.
 | `gh-pages` | Presentation | - |
 | `master` | All final code | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/examples) |
 | `00-starter` | Empty folders | - |
-| `01-new-project` | New CLI project | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-new-project/examples)
+| `01-new-project` | New CLI project | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-new-project/examples) |
+|  |  |  |
