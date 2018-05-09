@@ -1,7 +1,9 @@
-See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
+See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
+
+## Branch overview
+Examples showing how to use `angular-cli` to quickly create components.  Some small modifications are done to component files as an example of how they work.  Also quick demonstration of global `styles.css` and how it applies to the overall project.
 
 ## Steps in this branch
-
 1.  Add info to `styles.css` to get rid of padding/margin.
 
 ```
