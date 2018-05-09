@@ -1,3 +1,3 @@
-<p>
-  grocery-list works!
+<p *ngFor="let grocery of items">
+  <app-grocery-item [item]="grocery"></app-grocery-item>
 </p>

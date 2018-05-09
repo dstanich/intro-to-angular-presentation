@@ -2,24 +2,34 @@ See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
 
 ## Steps in this branch
 
-1.  Add info to `styles.css` to get rid of padding/margin.
-
+1.  Add interface for a `Grocery`
 ```
-        html, body {
-          width: 100%;
-          height: 100%;
-        }
-
-        * {
-          margin: 0;
-          padding: 0;
-        }
+      export interface Grocery {
+        item: string;
+        isFood: boolean;
+      }
 ```
 
-2.  Generate header component `ng generate component header`
-3.  Update text within `header`
-4.  Add background color to `header`
-5.  Generate grocery-list component `ng generate component grocery-list`
-6.  Add `app-header` and `app-grocery-list` to `app.component.html`
-7.  Generate grocery-item component within grocery-list `ng generate component grocery-list/grocery-item`.
-    * This will be used in a later branch
+2.  Create structure of grocery list in `app.component.ts`
+```
+      private groceries: Array<Grocery> = [{
+        name: 'Apples',
+        isFood: true
+      }, {
+        name: 'Shampoo',
+        isFood: false
+      }, {
+        name: 'Milk',
+        isFood: true
+      }, {
+        name: 'Cereal',
+        isFood: true
+      }]
+```
+
+3.  Add `@Input()` to `grocery-list` to accept items
+4.  Update `grocery-list.component.html` to have *ngFor and output items
+5.  Add `@Input()` to `grocery-item` to accept specific item
+6.  Update `grocery-item.component.html` to...
+    * Print `{{item.name}}`
+    * Add `<span>` with `*ngIf` for when `isFood` is true
