@@ -1,7 +1,9 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
 
 ## Steps in this branch
+
 1.  Add info to `styles.css` to get rid of padding/margin.
+
 ```
         html, body {
           width: 100%;
@@ -20,5 +22,5 @@ See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
 5.  Generate add-item component `ng generate component add-item`
 6.  Generate grocery-list component `ng generate component grocery-list`
 7.  Add `app-header`, `app-add-item`, `app-grocery-list` to `app.component.html`
-8.  Generate grocery-item component within grocery-list `ng generate component app/grocery-list/grocery-item`.
-    - This will be used in a later branch
+8.  Generate grocery-item component within grocery-list `ng generate component grocery-list/grocery-item`.
+    * This will be used in a later branch
