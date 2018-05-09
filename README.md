@@ -1,35 +1,12 @@
-See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
+See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
+
+## Branch overview
+This branch focuses on how to handle outputs.  There are examples of capturing browser based outputs (mouse click) and component created outputs (EventEmitter).
 
 ## Steps in this branch
-
-1.  Add interface for a `Grocery`
-```
-      export interface Grocery {
-        item: string;
-        isFood: boolean;
-      }
-```
-
-2.  Create structure of grocery list in `app.component.ts`
-```
-      private groceries: Array<Grocery> = [{
-        name: 'Apples',
-        isFood: true
-      }, {
-        name: 'Shampoo',
-        isFood: false
-      }, {
-        name: 'Milk',
-        isFood: true
-      }, {
-        name: 'Cereal',
-        isFood: true
-      }]
-```
-
-3.  Add `@Input()` to `grocery-list` to accept items
-4.  Update `grocery-list.component.html` to have *ngFor and output items
-5.  Add `@Input()` to `grocery-item` to accept specific item
-6.  Update `grocery-item.component.html` to...
-    * Print `{{item.name}}`
-    * Add `<span>` with `*ngIf` for when `isFood` is true
+1.  Add `<button>` to `grocery-item` to remove item
+2.  Add `(click)` handler to item which sends the grocery item as paramter
+3.  Add `@Output()` to `grocery-item.component.ts`
+4.  Add function for handler, which emits the output event
+5.  Add `(itemRemoved)` handler to `<app-grocery-list>` in `app.component.html` which passes in `$event`
+6.  Add function for handler in `app.component.ts` which does `.splice(index, 1)` on the removed item

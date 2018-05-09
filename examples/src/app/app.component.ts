@@ -24,6 +24,10 @@ export class AppComponent {
       isFood: true
     }
   ];
+
+  itemRemoved(item: Grocery) {
+    this.groceries.splice(this.groceries.indexOf(item), 1);
+  }
 }
 
 export interface Grocery {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Grocery } from '../app.component';
 
 @Component({
@@ -8,8 +8,13 @@ import { Grocery } from '../app.component';
 })
 export class GroceryListComponent implements OnInit {
   @Input() items: Array<Grocery>;
+  @Output() itemRemoved: EventEmitter<Grocery> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  removeClicked(item: Grocery) {
+    this.itemRemoved.emit(item);
+  }
 }

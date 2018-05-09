@@ -1,2 +1,4 @@
 <app-header></app-header>
-<app-grocery-list [items]="groceries"></app-grocery-list>
+<app-grocery-list [items]="groceries"
+                  (itemRemoved)="itemRemoved($event)">
+</app-grocery-list>
