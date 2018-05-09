@@ -19,3 +19,5 @@ See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
 4.  Add background color to `header`
 5.  Generate grocery-list component `ng generate component grocery-list`
 6.  Add `app-header` and `app-grocery-list` to `app.component.html`
+7.  Generate grocery-item component within grocery-list `ng generate component app/grocery-list/grocery-item`.
+    - This will be used in a later branch
