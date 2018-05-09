@@ -1,7 +1,7 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
 
 ## Branch overview
-Example of usage of `interface` which is a TypeScript concept.  Creating class level variables which are then passed down through `@Input()` to components.  Contains examples of template syntax including `*ngFor`, `*ngIf`, and binding through `[]` and `{{}}`.
+This branch focuses on how to handle outputs.  There are examples of capturing browser based outputs (mouse click) and component created outputs (EventEmitter).
 
 ## Steps to get to the next branch...
 1.  Add `<button>` to `grocery-item` to remove item
