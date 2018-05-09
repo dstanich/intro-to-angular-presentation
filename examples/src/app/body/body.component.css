@@ -1,7 +1,0 @@
-:host {
-  display: flex;
-}
-
-app-left, app-right {
-  flex: 1;
-}
