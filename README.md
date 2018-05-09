@@ -1,9 +1,30 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
 
-## Branch overview
-Shows example of how to install `angular-cli` and then create a new project.
+## Steps to get to the next branch...
+1.  Add info to `styles.css` to get rid of padding/margin.
 
-## Steps in this branch
-1.  Install angular-cli: `npm install @angular/cli -g`
-2.  Generate new project: `ng new examples`
-3.  Start the application: `npm start`
+```
+        html, body {
+          width: 100%;
+          height: 100%;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+        }
+```
+
+2.  Generate header component `ng generate component header`
+3.  Update text within `header` to have a title
+4.  Edit `header.component.css` to add a `:host` selector with `background: pink`
+5.  Generate grocery-list component `ng generate component grocery-list`
+6.  Add `app-header` and `app-grocery-list` to `app.component.html`
+
+```
+        <app-header></app-header>
+        <app-grocery-list></app-grocery-list>
+```
+
+7.  Generate grocery-item component within grocery-list `ng generate component grocery-list/grocery-item`.
+    * This will be used in a later branch
