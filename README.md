@@ -1,7 +1,7 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
 
 ## Branch overview
-Examples showing how to use `angular-cli` to quickly create components.  Some small modifications are done to component files as an example of how they work.  Also quick demonstration of global `styles.css` and how it applies to the overall project.
+Example of usage of `interface` which is a TypeScript concept.  Creating class level variables which are then passed down through `@Input()` to components.  Contains examples of template syntax including `*ngFor`, `*ngIf`, and binding through `[]` and `{{}}`.
 
 ## Steps to get to the next branch...
 1.  Add interface for a `Grocery` in `app.component.ts`
