@@ -3,25 +3,35 @@ See [master](https://github.com/dstanich/intro-to-angular-presentation) branch f
 ## Branch overview
 Examples showing how to use `angular-cli` to quickly create components.  Some small modifications are done to component files as an example of how they work.  Also quick demonstration of global `styles.css` and how it applies to the overall project.
 
-## Steps in this branch
-1.  Add info to `styles.css` to get rid of padding/margin.
-
+## Steps to get to the next branch...
+1.  Add interface for a `Grocery` in `app.component.ts`
 ```
-        html, body {
-          width: 100%;
-          height: 100%;
-        }
-
-        * {
-          margin: 0;
-          padding: 0;
-        }
+      export interface Grocery {
+        item: string;
+        isFood: boolean;
+      }
 ```
 
-2.  Generate header component `ng generate component header`
-3.  Update text within `header`
-4.  Add background color to `header`
-5.  Generate grocery-list component `ng generate component grocery-list`
-6.  Add `app-header` and `app-grocery-list` to `app.component.html`
-7.  Generate grocery-item component within grocery-list `ng generate component grocery-list/grocery-item`.
-    * This will be used in a later branch
+2.  Create structure of grocery list in `app.component.ts`
+```
+      private groceries: Array<Grocery> = [{
+        name: 'Apples',
+        isFood: true
+      }, {
+        name: 'Shampoo',
+        isFood: false
+      }, {
+        name: 'Milk',
+        isFood: true
+      }, {
+        name: 'Cereal',
+        isFood: true
+      }]
+```
+
+3.  Add `@Input() items: Array<Grocery>` to `grocery-list` to accept items
+4.  Update `grocery-list.component.html` to have `*ngFor="let grocery of items"` and output items
+5.  Add `@Input() item: Grocery` to `grocery-item` to accept specific item
+6.  Update `grocery-item.component.html` to...
+    * Print `{{item.name}}`
+    * Add `<span *ngIf="item.isFood">` with something inside for when `isFood` is true
