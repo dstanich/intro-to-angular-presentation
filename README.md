@@ -1,7 +1,7 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
 
-## Steps
-1.  Add info to `styles.css`
+## Steps in this branch
+1.  Add info to `styles.css` to get rid of padding/margin.
 ```
         html, body {
           width: 100%;
@@ -15,13 +15,7 @@ See [master](https://github.com/dstanich/intro-to-angular-presentation) branch.
 ```
 
 2.  Generate header component `ng generate component header`
-3.  Add background color to `header`
-4.  Generate body component `ng generate component body`
-5.  Add components to `index.html`
-6.  Generate components within `body`...
-7.  `cd src/app/body`
-8.  `ng generate component left`
-9.  `ng generate component right`
-10.  Add `app-left` and `app-right` to `body.component.html`
-11.  Set `body.component.css` to `display: flex` and `app-left`/`app-right` to `flex: 1`
-12.  Set background color in left/right
+3.  Update text within `header`
+4.  Add background color to `header`
+5.  Generate grocery-list component `ng generate component grocery-list`
+6.  Add `app-header` and `app-grocery-list` to `app.component.html`
