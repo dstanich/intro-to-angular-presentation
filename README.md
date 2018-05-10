@@ -33,7 +33,7 @@ Example of usage of `interface` which is a TypeScript concept.  Creating class l
 4.  Update `grocery-list.component.html` to have `*ngFor="let grocery of items"` and output items
 ```
         <p *ngFor="let grocery of items">
-        <app-grocery-item [item]="grocery"></app-grocery-item>
+          <app-grocery-item [item]="grocery"></app-grocery-item>
         </p>
 ```
 
@@ -42,6 +42,6 @@ Example of usage of `interface` which is a TypeScript concept.  Creating class l
 ```
         <b>{{item.name}}</b>
         <span *ngIf="item.isFood">
-        **FOOD**
+          **FOOD**
         </span>
 ```
