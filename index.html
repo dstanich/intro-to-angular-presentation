@@ -4,13 +4,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Intro to Angular (2+)</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			h1.heading {
+				font-size: 2.0em;
+			}
+		</style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,8 +30,108 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1 class="heading">Intro to Angular (2+)</h1>
+					<h4 style="margin-top:2.5em">David Stanich<br>2018-05-10</h4>
+					<div style="font-size:.8em">
+						<a href="https://github.com/dstanich/intro-to-angular-presentation" target="_blank">https://github.com/dstanich/intro-to-angular-presentation</a>
+					</div>
+				</section>
+
+				<section>
+					<h1 class="heading">AngularJS vs Angular</h1>
+					<ul>
+						<li><b>AngularJS (1.x)</b>: Legacy framework
+							<ul>
+								<li>Last major release: v1.7</li>
+							</ul>
+						</li>
+						<li><b>Angular (2+)</b>: "New" framework
+							<ul>
+								<li>Releases all backward compatible</li>
+								<li>Latest major release: v6.0</li>
+							</ul>
+						</li>
+						<li style="margin-top:1.5em;">Separate and not compatible</li>
+						<li>Some upgrade paths, but depends on app</li>
+					</ul>
+					<div style="margin-top: 2em; font-size: .5em;"><a href="http://blog.angularjs.org/2016/12/ok-let-me-explain-its-going-to-be.html">http://blog.angularjs.org/2016/12/ok-let-me-explain-its-going-to-be.html</a></div>
+				</section>
+
+				<section>
+					<h1 class="heading">TypeScript</h1>
+					<ul>
+						<li>Angular applications are written in TypeScript</li>
+						<li>TypeScript created by Microsoft (2012)</li>
+						<li>Open source</li>
+						<li>Superset of JavaScript</li>
+						<li>Transpiles "new" JS into ES5 (old JS)</li>
+						<li>Adds <b>optional</b> type definitions</li>
+						<li>NOT Angular specific, can be used for anything</li>
+					</ul>
+					<div style="margin-top:2em;font-size: 1em;">
+						<a href="https://www.typescriptlang.org/play/index.html" target="_blank">TypeScript Playground</a>
+					</div>
+				</section>
+
+				<section>
+					<h1 class="heading">angular-cli</h1>
+					<ul>
+						<li>Quickly create new projects with...
+							<ul>
+								<li>Unit tests</li>
+								<li>End to end tests</li>
+								<li>Development live reload</li>
+								<li>Production build/minification</li>
+							</ul>
+						</li>
+						<li>Ability to generate components, services, etc</li>
+						<li>Enforces/assists with <a href="https://angular.io/guide/styleguide" target="_blank">Angular best practices</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="heading">Application Structure</h1>
+					<ul>
+						<li>Angular applications are made up from...
+							<ul>
+								<li>Components</li>
+								<li>Services</li>
+								<li>Pipes</li>
+								<li>Directives</li>
+							</ul>
+						</li>
+						<li>Basic idea: data in to components, events out</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="heading">Demos</h1>
+					<ul>
+						<li>Run demos either by...
+							<ul>
+								<li>Cloning repo, running setup</li>
+								<li>Click <a href="https://github.com/dstanich/intro-to-angular-presentation" target="_blank">StackBlitz links</a> in README</li>
+							</ul>
+						</li>
+					</ul>
+					<div style="margin-top:2em;font-size:.8em">
+						<a href="https://github.com/dstanich/intro-to-angular-presentation" target="_blank">https://github.com/dstanich/intro-to-angular-presentation</a>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h1 class="heading">Why/When to Use</h1>
+						<div style="margin-top:-1em;margin-bottom:2em">(My personal opinion)</div>
+						<ul>
+							<li>Want opinioned methods of doing tasks</li>
+							<li>Medium/large applications</li>
+							<li>Enjoy object oriented development</li>
+							<li>Like the idea of typed language</li>
+						</ul>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -37,6 +143,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
