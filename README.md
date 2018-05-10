@@ -4,7 +4,7 @@ See [master](https://github.com/dstanich/intro-to-angular-presentation) branch f
 This branch focuses on how to handle outputs.  There are examples of capturing browser based outputs (mouse click) and component created outputs (EventEmitter).
 
 ## Steps to get to the next branch...
-1.  Add `<button (click)="removeClicked(grocery)">[x]</button>` to `grocery-item` to remove item
+1.  Add `<button (click)="removeClicked(grocery)">[x]</button>` to `grocery-list` to remove item
 2.  Add `@Output() itemRemoved: EventEmitter<Grocery> = new EventEmitter();` to `grocery-list.component.ts`
 3.  Add function for handler, which emits the output event
 ```
