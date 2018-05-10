@@ -31,7 +31,17 @@ Example of usage of `interface` which is a TypeScript concept.  Creating class l
 
 3.  Add `@Input() items: Array<Grocery>` to `grocery-list` to accept items
 4.  Update `grocery-list.component.html` to have `*ngFor="let grocery of items"` and output items
+```
+        <p *ngFor="let grocery of items">
+        <app-grocery-item [item]="grocery"></app-grocery-item>
+        </p>
+```
+
 5.  Add `@Input() item: Grocery` to `grocery-item` to accept specific item
-6.  Update `grocery-item.component.html` to...
-    * Print `{{item.name}}`
-    * Add `<span *ngIf="item.isFood">` with something inside for when `isFood` is true
+6.  Update `grocery-item.component.html` to:
+```
+        <b>{{item.name}}</b>
+        <span *ngIf="item.isFood">
+        **FOOD**
+        </span>
+```
