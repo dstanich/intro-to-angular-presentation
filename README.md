@@ -1,21 +1,33 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
 
 ## Branch overview
-Example of how to do two way binding (ngModel).  This is then used to add new items to the list.
+Example of how to create a service, inject it into a component, and using the Angular HttpClient.  Some basic Observable behavior is also demoed.
 
 ## Steps to get to the next branch...
-1.  Add two `<input>` for item name and isFood value.  Add `<button>` for add action.
+1.  `cd` back to root directory
+2.  Create new CLI project `ng new spacex`
+3.  Generate a service: `ng generate service launch`
+4.  Add `LaunchService` to `providers` array in `app.module.ts`
+5.  Add `import { HttpClientModule } from '@angular/common/http'` to `app.module.ts` and to `imports`
+6.  In `launch.service.ts`, add a constructor and inject HttpClient: `private httpClient: HttpClient`
+7.  Add `getLatestLaunch()` function to the `launch.service.ts` file to use HttpClient to call an API to get the latest SpaceX launch
 ```
-        <input type="text">
-        <input type="checkbox" id="isFood">
-        <label for="isFood">Food</label>
-        <button>Add</button>
+  getLatestLaunch(): Observable<object> {
+    return this.httpClient.get('https://api.spacexdata.com/v2/launches/latest');
+  }
 ```
 
-2.  Add `newItem: Grocery` as a class variable to `app.component.ts`
-3.  Add `import { FormsModule } from '@angular/forms';` to `app.module.ts` and add to `imports`
-4.  Add `[(ngModel)]="newItem.name"` to textbox
-5.  Add `[(ngModel)]="newItem.isFood"` to checkbox
-6.  Add `(click)="addItem()"` to button with call to function
-7.  Add `addItem()` handler function to `app.component.ts`
-8.  Inside handler function, push `newItem` to array and clear `newItem`
+8.  Remove everything from `app.component.html` and replace with
+```
+        <button (click)="fetchLatestLaunch()">Get Latest Launch</button>
+        <pre>{{latestLaunch}}</pre>
+```
+
+9.  In `app.component.ts`, add a constructor and inject `launch.service.ts`: `private launchService: LaunchService`
+
+10.  Add `fetchLatestLaunch()` function to `app.component.ts` which calls service and subscribes
+```
+    this.launchService
+      .getLatestLaunch()
+      .subscribe(latest => (this.latestLaunch = latest));
+```
