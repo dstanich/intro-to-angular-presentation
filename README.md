@@ -17,5 +17,10 @@ Example of how to do two way binding (ngModel).  This is then used to add new it
 4.  Add `[(ngModel)]="newItem.name"` to textbox
 5.  Add `[(ngModel)]="newItem.isFood"` to checkbox
 6.  Add `(click)="addItem()"` to button with call to function
-7.  Add `addItem()` handler function to `app.component.ts`
-8.  Inside handler function, push `newItem` to array and clear `newItem`
+7.  Add `addItem()` handler function to `app.component.ts` which adds to array and clears item
+```
+        addItem() {
+          this.groceries.push(this.newItem);
+          this.newItem = { name: '', isFood: false };
+        }
+```
