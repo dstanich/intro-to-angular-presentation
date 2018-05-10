@@ -18,13 +18,13 @@ All code is available in this repository in branches.
 [StackBlitz](https://stackblitz.com) can be used to load each branch into a live editor and browser without any local setup.  Links for each branch are in the table below. 
 
 ### Branches
-| Branch | Content | StackBlitz Link |
+| Branch | Content | StackBlitz Links |
 |--------|---------|-----------------|
 | `gh-pages` | Presentation | - |
-| `master` | All final code | [Edit - grocery](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/examples) [Edit - spacex](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/spacex) |
-| `00-starter` | Create new project | N/A |
-| `01-components` | Create component structure | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-components/examples) |
-| `02-inputs` | Pass data into components | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/02-inputs/examples) |
-| `03-outputs` | Trigger events from components | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/03-outputs/examples) |
-| `04-ngmodel` | Two way binding | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/04-ngmodel/examples) |
-| `05-http-service` | Service, and HTTP calls | [Edit](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/05-http-service/spacex) |
+| `master` | All final code | [Edit - grocery](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/examples) <br> [Edit - spacex](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/spacex) |
+| `00-starter` | Create new project | Before Changes (N/A) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-components/examples) |
+| `01-components` | Create component structure | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-components/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/02-inputs/examples) |
+| `02-inputs` | Pass data into components | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/02-inputs/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/03-outputs/examples) |
+| `03-outputs` | Trigger events from components | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/03-outputs/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/04-ngmodel/examples) |
+| `04-ngmodel` | Two way binding | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/04-ngmodel/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/05-http-service/spacex) |
+| `05-http-service` | Service, and HTTP calls | Before Changes (N/A) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/spacex)|
