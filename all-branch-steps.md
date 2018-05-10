@@ -88,7 +88,7 @@
 
 
 ## 03-outputs
-1.  Add `<button (click)="removeClicked(grocery)">[x]</button>` to `grocery-item` to remove item
+1.  Add `<button (click)="removeClicked(grocery)">[x]</button>` to `grocery-list` to remove item
 2.  Add `@Output() itemRemoved: EventEmitter<Grocery> = new EventEmitter();` to `grocery-list.component.ts`
 3.  Add function for handler, which emits the output event
 ```
