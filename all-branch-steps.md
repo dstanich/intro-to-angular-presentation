@@ -24,6 +24,13 @@
 2.  Generate header component `ng generate component header`
 3.  Update text within `header` to have a title
 4.  Edit `header.component.css` to add a `:host` selector with `background: pink`
+```
+        :host {
+          display: block;
+          background: pink;
+        }
+```
+
 5.  Generate grocery-list component `ng generate component grocery-list`
 6.  Add `app-header` and `app-grocery-list` to `app.component.html`
 
@@ -64,19 +71,39 @@
 
 3.  Add `@Input() items: Array<Grocery>` to `grocery-list` to accept items
 4.  Update `grocery-list.component.html` to have `*ngFor="let grocery of items"` and output items
+```
+        <p *ngFor="let grocery of items">
+          <app-grocery-item [item]="grocery"></app-grocery-item>
+        </p>
+```
+
 5.  Add `@Input() item: Grocery` to `grocery-item` to accept specific item
-6.  Update `grocery-item.component.html` to...
-    * Print `{{item.name}}`
-    * Add `<span *ngIf="item.isFood">` with something inside for when `isFood` is true
+6.  Update `grocery-item.component.html` to:
+```
+        <b>{{item.name}}</b>
+        <span *ngIf="item.isFood">
+          **FOOD**
+        </span>
+```
 
 
 ## 03-outputs
-1.  Add `<button>` to `grocery-item` to remove item
-2.  Add `(click)` handler to item which sends the grocery item as paramter
-3.  Add `@Output()` to `grocery-item.component.ts`
-4.  Add function for handler, which emits the output event
-5.  Add `(itemRemoved)` handler to `<app-grocery-list>` in `app.component.html` which passes in `$event`
-6.  Add function for handler in `app.component.ts` which does `.splice(index, 1)` on the removed item
+1.  Add `<button (click)="removeClicked(grocery)">[x]</button>` to `grocery-item` to remove item
+2.  Add `@Output() itemRemoved: EventEmitter<Grocery> = new EventEmitter();` to `grocery-list.component.ts`
+3.  Add function for handler, which emits the output event
+```
+        removeClicked(item: Grocery) {
+          this.itemRemoved.emit(item);
+        }
+```
+
+4.  Add `(itemRemoved)="itemRemoved($event)"` handler to `<app-grocery-list>` in `app.component.html`
+5.  Add `itemRemoved()` function for handler in `app.component.ts` which removes the item
+```
+        itemRemoved(item: Grocery) {
+          this.groceries.splice(this.groceries.indexOf(item), 1);
+        }
+```
 
 
 ## 04-ngmodel
@@ -93,8 +120,13 @@
 4.  Add `[(ngModel)]="newItem.name"` to textbox
 5.  Add `[(ngModel)]="newItem.isFood"` to checkbox
 6.  Add `(click)="addItem()"` to button with call to function
-7.  Add `addItem()` handler function to `app.component.ts`
-8.  Inside handler function, push `newItem` to array and clear `newItem`
+7.  Add `addItem()` handler function to `app.component.ts` which adds to array and clears item
+```
+        addItem() {
+          this.groceries.push(this.newItem);
+          this.newItem = { name: '', isFood: false };
+        }
+```
 
 
 ## 05-http-service
