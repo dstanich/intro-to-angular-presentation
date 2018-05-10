@@ -1,0 +1,21 @@
+{
+  "name": "intro-to-angular-presentation",
+  "version": "1.0.0",
+  "description": "Presentation given to... * 2018-05-10 IBM Rochester FED@IBM",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "preinstall": "cd examples && npm install && cd ../spacex && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dstanich/intro-to-angular-presentation.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/dstanich/intro-to-angular-presentation/issues"
+  },
+  "homepage": "https://github.com/dstanich/intro-to-angular-presentation#readme"
+}

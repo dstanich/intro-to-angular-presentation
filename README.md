@@ -15,6 +15,7 @@ All code is available in this repository in branches.
 1.  `npm install -g @angular/cli`
 2.  Clone this repository
 3.  `cd intro-to-angular-presentation && npm install`
+4.  Then `cd` into either `examples` or `space` and run `npm start` to run a demo
 
 ### Setup (StackBlitz)
 [StackBlitz](https://stackblitz.com) can be used to load each branch into a live editor and browser without any local setup.  Links for each branch are in the table below.  There is one for a starting point before the changes in the branch and one for after the changes.
@@ -24,7 +25,7 @@ All code is available in this repository in branches.
 |--------|---------|-----------------|
 | `gh-pages` | Presentation | - |
 | `master` | All final code | [Edit - grocery](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/examples) <br> [Edit - spacex](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/master/spacex) |
-| `00-starter` | Create new project | Before Changes (N/A) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-components/examples) |
+| `00-starter` | Create new project | Before Changes (N/A) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/00-starter-end/examples) |
 | `01-components` | Create component structure | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/01-components/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/02-inputs/examples) |
 | `02-inputs` | Pass data into components | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/02-inputs/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/03-outputs/examples) |
 | `03-outputs` | Trigger events from components | [Before Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/03-outputs/examples) <br> [After Changes](https://stackblitz.com/github/dstanich/intro-to-angular-presentation/tree/04-ngmodel/examples) |
