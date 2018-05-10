@@ -1,0 +1,4 @@
+<p *ngFor="let grocery of items">
+  <app-grocery-item [item]="grocery"></app-grocery-item>
+  <button (click)="removeClicked(grocery)">[x]</button>
+</p>

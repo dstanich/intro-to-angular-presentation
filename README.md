@@ -4,7 +4,7 @@ Presentation given to...
 * 2018-05-10 IBM Rochester FED@IBM
 
 ## Overview
-**TBD**
+Introduction to basic concepts of Angular (2+).  Slides available at: [https://dstanich.github.io/intro-to-angular-presentation/](https://dstanich.github.io/intro-to-angular-presentation/).
 
 ## Materials
 All code is available in this repository in branches.
