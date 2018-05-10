@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  newItem: Grocery = { name: '', isFood: false };
+
   private groceries: Array<Grocery> = [
     {
       name: 'Apples',
@@ -27,6 +29,11 @@ export class AppComponent {
 
   itemRemoved(item: Grocery) {
     this.groceries.splice(this.groceries.indexOf(item), 1);
+  }
+
+  addItem() {
+    this.groceries.push(this.newItem);
+    this.newItem = { name: '', isFood: false };
   }
 }
 
