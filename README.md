@@ -1,20 +1,21 @@
 See [master](https://github.com/dstanich/intro-to-angular-presentation) branch for all details.
 
 ## Branch overview
-Example of how to create a service, store data, and inject service into components.
+Example of how to do two way binding (ngModel).  This is then used to add new items to the list.
 
 ## Steps to get to the next branch...
-1.  Create a service using `ng generate service grocery`
-2.  Add `GroceryService` to `providers` array in `app.module.ts` and import it
+1.  Add two `<input>` for item name and isFood value.  Add `<button>` for add action.
+```
+        <input type="text">
+        <input type="checkbox" id="isFood">
+        <label for="isFood">Food</label>
+        <button>Add</button>
+```
 
-TBD
-3.  Move grocery items object to class level in the `grocery.service.ts`
-4.  Add getter for groceries to the service
-```
-        get groceries(): Array<Grocery> {
-          return this.groceries;
-        }
-```
-5.  Inject `grocery.service.ts` into constructor of `app.component.ts` using `private groceryService: GroceryService`
-6.  Add class variable to `app.component.ts` to proxy the service `groceries: Array<Grocery>;`
-7.  In constructor, set class level variable to the servicexxx
+2.  Add `newItem: Grocery` as a class variable to `app.component.ts`
+3.  Add `import { FormsModule } from '@angular/forms';` to `app.module.ts` and add to `imports`
+4.  Add `[(ngModel)]="newItem.name"` to textbox
+5.  Add `[(ngModel)]="newItem.isFood"` to checkbox
+6.  Add `(click)="addItem()"` to button with call to function
+7.  Add `addItem()` handler function to `app.component.ts`
+8.  Inside handler function, push `newItem` to array and clear `newItem`
