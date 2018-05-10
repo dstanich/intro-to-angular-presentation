@@ -21,6 +21,13 @@ Examples of how to quickly create components with `angular-cli`.  Some basic exa
 2.  Generate header component `ng generate component header`
 3.  Update text within `header` to have a title
 4.  Edit `header.component.css` to add a `:host` selector with `background: pink`
+```
+        :host {
+        display: block;
+        background: pink;
+        }
+```
+
 5.  Generate grocery-list component `ng generate component grocery-list`
 6.  Add `app-header` and `app-grocery-list` to `app.component.html`
 
