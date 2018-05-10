@@ -4,7 +4,7 @@ Presentation given to...
 * 2018-05-10 IBM Rochester FED@IBM
 
 ## Overview
-Introduction to basic concepts of Angular (2+).  Slides available at: [https://dstanich.github.io/intro-to-angular-presentation/](https://dstanich.github.io/intro-to-angular-presentation/).
+Introduction to basic concepts of Angular (2+).  Covers mostly `angular-cli` and components with a small example of services and http requests.  Slides available at: [https://dstanich.github.io/intro-to-angular-presentation/](https://dstanich.github.io/intro-to-angular-presentation/).
 
 ## Materials
 All code is available in this repository in branches.
@@ -15,7 +15,7 @@ All code is available in this repository in branches.
 3.  `cd intro-to-angular-presentation && npm install`
 
 ### Setup (StackBlitz)
-[StackBlitz](https://stackblitz.com) can be used to load each branch into a live editor and browser without any local setup.  Links for each branch are in the table below. 
+[StackBlitz](https://stackblitz.com) can be used to load each branch into a live editor and browser without any local setup.  Links for each branch are in the table below.  There is one for a starting point before the changes in the branch and one for after the changes.
 
 ### Branches
 | Branch | Content | StackBlitz Links |
