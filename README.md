@@ -6,6 +6,8 @@ Presentation given to...
 ## Overview
 Introduction to basic concepts of Angular (2+).  Covers mostly `angular-cli` and components with a small example of services and http requests.  Slides available at: [https://dstanich.github.io/intro-to-angular-presentation/](https://dstanich.github.io/intro-to-angular-presentation/).
 
+Each branch starts with a base set of files which contains a `README.md` file that describes the steps needed to accomplish the goal for that branch.  To see expected output, you can view the `master`'s `README.md` and view the StackBlitz link.
+
 ## Materials
 All code is available in this repository in branches.
 
